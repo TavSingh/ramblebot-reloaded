@@ -126,8 +126,8 @@ public class WordPredictor {
             int mid = low + (high - low) / 2;
             double wordProb = list.get(mid).cumulativeProbability();
 
-            if (wordProb >= target) {
-                high = mid - 1;
+            if (wordProb > target) {
+                high = mid;
             } else {
                 low = mid + 1;
             }
